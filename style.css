@@ -14,6 +14,7 @@ h2 {
 h3 {
   font-size: 18px;
   font-weight: 500;
+  padding: 25px;
 }
 
 p {
@@ -214,6 +215,7 @@ footer p {
   }
 
   #about p {
+    padding: 10px;
     width: 50%;
   }
 
@@ -225,14 +227,14 @@ footer p {
 
   #ideas .ideas-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     max-width: 100%;
     margin: 40px auto;
   }
 
   #ideas img {
-    width: 350px;
-    padding: 20px;
+    max-width: 350px;
+    padding: 25px;
   }
 
   #ideas .forests {

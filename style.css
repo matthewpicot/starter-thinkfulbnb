@@ -1,7 +1,7 @@
 /* -------  General Styles ------- */
 
 body {
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
 }
 
 h2 {
@@ -60,7 +60,7 @@ header {
 }
 
 .logo {
-  font-family: 'Pangolin', cursive;
+  font-family: "Pangolin", cursive;
   font-size: 42px;
   color: #fff;
 }
@@ -90,7 +90,7 @@ header nav ul li a:hover {
 /* ------- Search Form ------- */
 form {
   border: 2px solid #ff385c;
-  padding: 20px;
+  padding: 100%;
 }
 
 form div {
@@ -106,7 +106,8 @@ form label {
 
 form select,
 form input {
-  width: 180px;
+  margin-bottom: 10px;
+  width: 100%;
 }
 
 form button {
@@ -115,16 +116,11 @@ form button {
   color: #fff;
   font-size: 24px;
   padding: 15px;
-  width: 100%;
+  width: auto;
 }
 
 form .select {
   display: inline-block;
-}
-
-/* ------- About ------- */
-#about img {
-  padding: 20px 0;
 }
 
 /* ------- Ideas ------- */
@@ -144,134 +140,220 @@ footer p {
   padding: 20px;
 }
 
+/* ------- About ------- */
+body #about {
+  padding: 30px;
+}
+
+body #about .about-inner-content {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: row;
+}
+
+body #about p {
+  padding: 10px;
+  width: 50%;
+}
+
+body #about img {
+  padding: 10px;
+  width: 50%;
+}
+
+/* ------- Stay ------- */
+
+body #stay form {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: 0px 10px;
+}
+
+body #stay label {
+  width: 100%;
+}
+
+body #stay .select {
+  width: 100%;
+}
+
+body #stay button {
+  padding: 10px 20px;
+  font-size: 20px;
+}
+
+body #stay div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10px 5px;
+}
+
+/* ------- Ideas ------- */
+
+body #ideas .ideas-container {
+  display: flex;
+  justify-content: space-evenly;
+  max-width: 100%;
+  margin: 40px auto;
+}
+
+body #ideas img {
+  max-width: 350px;
+  padding: 25px;
+}
+
+body #ideas .forests {
+  display: flex;
+  flex-direction: column;
+}
+
+body #ideas .beaches {
+  display: flex;
+  flex-direction: column;
+}
+
+body #ideas .invis-mobile {
+  display: inline-block;
+}
+
+body #ideas .rustic-cabins {
+  display: none;
+}
+
+body #ideas .pet-friendly {
+  display: none;
+}
+
+/* ------- Host ------- */
+body #host {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+body #host .host-group {
+  flex: 1;
+  padding: 20px;
+}
+
+body #host img {
+  flex: 1;
+  width: auto;
+  max-width: 100%;
+}
+
+body #host p {
+  line-height: 1.5em;
+  margin: 0;
+  flex: 1;
+}
+
+body #host ul {
+  flex: 1;
+  margin-top: 10px;
+  padding-left: 20px;
+}
+
+/* ------- Default ------- */
+
+/* ------- Host ------- */
+body #host .host-group {
+  padding: 20px 40px;
+  width: 50%;
+}
+
+body #host img {
+  width: 100%;
+  max-width: none;
+}
+
+body #host p {
+  flex: 0 0 50%;
+  margin-right: 20px;
+}
+
 /* -------  Media Query ------- */
-@media all and (min-width: 480px) {
+@media (max-width: 790px) {
   /* ------- Header ------- */
-  header {
+  body header {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
 
-  .logo {
+  body .logo {
     font-size: 30px;
   }
 
-  header nav ul li {
+  body header nav ul li {
     padding: 0 8px;
   }
 
   /* ------- Stay ------- */
-  #stay form {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    padding: 0px 10px;
+  body #stay form {
+    align-items: center;
+    flex-direction: column;
   }
 
-  #stay label {
-    width: 100%;
+  body #stay label {
+    width: 20%;
   }
 
-  #stay .select {
-    width: 100%;
-  }
-
-  #stay button {
+  body #stay button {
+    width: 50%;
     padding: 10px 20px;
     font-size: 20px;
   }
 
-  #stay div {
+  body #stay div {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-around;
+    width: 100%;
     padding: 10px 5px;
   }
 
   /* ------- About ------- */
-  #about .about-inner-content {
+  body #about .about-inner-content {
     text-align: center;
-  }
-
-  #about img {
-    width: 250px;
-    padding: 30px;
-  }
-}
-
-@media all and (min-width: 800px) {
-  /* ------- About ------- */
-  #about {
-    padding: 30px;
-  }
-
-  #about .about-inner-content {
-    display: flex;
-    width: 100%;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-direction: row;
-  }
-
-  #about p {
-    padding: 10px;
-    width: 50%;
-  }
-
-  #about img {
-    padding: 10px;
-  }
-
-  /* ------- Ideas ------- */
-
-  #ideas .ideas-container {
-    display: flex;
-    justify-content: space-evenly;
-    max-width: 100%;
-    margin: 40px auto;
-  }
-
-  #ideas img {
-    max-width: 350px;
-    padding: 25px;
-  }
-
-  #ideas .forests {
-    display: flex;
     flex-direction: column;
   }
 
-  #ideas .beaches {
-    display: flex;
-    flex-direction: column;
-  }
-
-  #ideas .invis-mobile {
-    display: inline-block;
-  }
-
-  #ideas .rustic-cabins {
-    display: none;
-  }
-
-  #ideas .pet-friendly {
-    display: none;
+  body #about img {
+    width: 80%;
+    padding: 30px;
   }
 
   /* ------- Host ------- */
-  #host {
-    display: flex;
+  body #host {
+    flex-direction: column;
+  }
+
+  /* ------- Ideas ------- */
+  body #ideas {
+    flex-direction: column;
     align-items: center;
   }
 
-  #host .host-group {
+  body #ideas .ideas-container {
     display: flex;
     flex-direction: column;
-    padding: 20px;
+    align-items: center;
   }
 
-  #host img {
-    width: 100%;
+  body #ideas .invis-mobile {
+    display: none;
+  }
+
+  body #ideas .mobile {
+    display: flex;
+    flex-direction: column;
   }
 }

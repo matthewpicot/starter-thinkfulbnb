@@ -14,7 +14,6 @@ h2 {
 h3 {
   font-size: 18px;
   font-weight: 500;
-  padding: 25px;
 }
 
 p {
@@ -31,11 +30,11 @@ section.alternate-background {
   color: #fff;
 }
 
-img {
+main img {
   width: 100%;
 }
 
-/* --- Groups & Items --- */
+/* ---  Groups & Items --- */
 
 .group {
   display: flex;
@@ -51,26 +50,23 @@ img {
   flex: 2;
 }
 
-/* ------- Navigation ------- */
+/* -------  Navigation ------- */
 
 header {
   background-color: #ff385c;
-  padding: 20px 20px 10px 20px;
+  padding: 20px 20px 20px 20px;
   text-align: center;
 }
 
 .logo {
   font-family: "Pangolin", cursive;
-  font-size: 42px;
+  font-size: 50px;
   color: #fff;
 }
 
 header nav ul {
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 20px 0;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
 }
 
 header nav ul li {
@@ -80,6 +76,11 @@ header nav ul li {
 header nav ul li a {
   color: #fff;
   text-decoration: none;
+  padding: 0 20px 0 0;
+}
+
+header nav ul li:last-child a {
+  margin-right: 20px;
 }
 
 header nav ul li a:hover {
@@ -87,17 +88,13 @@ header nav ul li a:hover {
   text-decoration: none;
 }
 
-/* ------- Search Form ------- */
+/* -------  Search Form ------- */
 form {
-  border: 2px solid #ff385c;
-  padding: 100%;
-}
-
-form div {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  align-items: center;
-  padding: 20px 0;
+  border: 2px solid #ff385c;
+  padding: 10px;
 }
 
 form label {
@@ -106,8 +103,9 @@ form label {
 
 form select,
 form input {
-  margin-bottom: 10px;
-  width: 100%;
+  margin-bottom: 20px;
+  width: 65%;
+  float: right;
 }
 
 form button {
@@ -116,19 +114,11 @@ form button {
   color: #fff;
   font-size: 24px;
   padding: 15px;
-  width: auto;
+  width: 100%;
+  justify-content: center;
 }
 
-form .select {
-  display: inline-block;
-}
-
-/* ------- Ideas ------- */
-#ideas .invis-mobile {
-  display: none;
-}
-
-/* ------- Footer ------- */
+/* -------  Footer ------- */
 
 footer {
   background-color: #ff385c;
@@ -140,220 +130,56 @@ footer p {
   padding: 20px;
 }
 
-/* ------- About ------- */
-body #about {
-  padding: 30px;
-}
-
-body #about .about-inner-content {
-  display: flex;
-  width: 100%;
-  justify-content: space-evenly;
-  align-items: center;
-  flex-direction: row;
-}
-
-body #about p {
-  padding: 10px;
-  width: 50%;
-}
-
-body #about img {
-  padding: 10px;
-  width: 50%;
-}
-
-/* ------- Stay ------- */
-
-body #stay form {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  padding: 0px 10px;
-}
-
-body #stay label {
-  width: 100%;
-}
-
-body #stay .select {
-  width: 100%;
-}
-
-body #stay button {
-  padding: 10px 20px;
-  font-size: 20px;
-}
-
-body #stay div {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-  padding: 10px 5px;
-}
-
-/* ------- Ideas ------- */
-
-body #ideas .ideas-container {
-  display: flex;
-  justify-content: space-evenly;
-  max-width: 100%;
-  margin: 40px auto;
-}
-
-body #ideas img {
-  max-width: 350px;
-  padding: 25px;
-}
-
-body #ideas .forests {
-  display: flex;
-  flex-direction: column;
-}
-
-body #ideas .beaches {
-  display: flex;
-  flex-direction: column;
-}
-
-body #ideas .invis-mobile {
-  display: inline-block;
-}
-
-body #ideas .rustic-cabins {
-  display: none;
-}
-
-body #ideas .pet-friendly {
-  display: none;
-}
-
-/* ------- Host ------- */
-body #host {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-body #host .host-group {
-  flex: 1;
-  padding: 20px;
-}
-
-body #host img {
-  flex: 1;
-  width: auto;
-  max-width: 100%;
-}
-
-body #host p {
-  line-height: 1.5em;
-  margin: 0;
-  flex: 1;
-}
-
-body #host ul {
-  flex: 1;
-  margin-top: 10px;
-  padding-left: 20px;
-}
-
-/* ------- Default ------- */
-
-/* ------- Host ------- */
-body #host .host-group {
-  padding: 20px 40px;
-  width: 50%;
-}
-
-body #host img {
-  width: 100%;
-  max-width: none;
-}
-
-body #host p {
-  flex: 0 0 50%;
-  margin-right: 20px;
-}
-
 /* -------  Media Query ------- */
-@media (max-width: 790px) {
-  /* ------- Header ------- */
-  body header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
 
-  body .logo {
-    font-size: 30px;
-  }
-
-  body header nav ul li {
-    padding: 0 8px;
-  }
-
-  /* ------- Stay ------- */
-  body #stay form {
-    align-items: center;
-    flex-direction: column;
-  }
-
-  body #stay label {
-    width: 20%;
-  }
-
-  body #stay button {
-    width: 50%;
-    padding: 10px 20px;
-    font-size: 20px;
-  }
-
-  body #stay div {
+@media all and (min-width: 600px) {
+  header {
+    background-color: #ff385c;
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
-    justify-content: space-around;
+    justify-content: space-between;
+  }
+
+  header nav {
+    padding: 10px;
+  }
+
+  form {
+    flex-direction: row;
+  }
+
+  .group {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-flow: row nowrap;
+    align-items: center;
+  }
+
+  .form .item {
+    display: flex block;
+    flex: 1 1 auto;
+    flex-direction: column;
+  }
+
+  .item label,
+  .item input,
+  .item select,
+  .item button {
+    display: flex;
     width: 100%;
-    padding: 10px 5px;
   }
 
-  /* ------- About ------- */
-  body #about .about-inner-content {
-    text-align: center;
-    flex-direction: column;
-  }
-
-  body #about img {
-    width: 80%;
-    padding: 30px;
-  }
-
-  /* ------- Host ------- */
-  body #host {
-    flex-direction: column;
-  }
-
-  /* ------- Ideas ------- */
-  body #ideas {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  body #ideas .ideas-container {
+  .grid-column {
     display: flex;
+    flex: 1;
     flex-direction: column;
-    align-items: center;
+    margin: 10px;
   }
 
-  body #ideas .invis-mobile {
-    display: none;
-  }
-
-  body #ideas .mobile {
+  .grid-row {
     display: flex;
-    flex-direction: column;
+    flex: 1;
+    flex-direction: row;
   }
 }

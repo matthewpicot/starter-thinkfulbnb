@@ -193,17 +193,27 @@ footer p {
     flex-direction: row;
   }
 
+  #ideas h3 {
+    padding: 15px;
+  }
+
   #ideas .ideas-container {
-    display: flex;
-    justify-content: space-between;
-    max-width: 100%;
-    margin: 40px auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  #ideas .ideas-container > div {
+    flex: unset;
+    margin-bottom: 0;
   }
 
   #ideas img {
-    padding: 20px;
-    width: 450px;
+    width: 100%;
+    max-width: 100%;
+    padding: 10px;
   }
+
 
   #ideas .forests {
     display: flex;

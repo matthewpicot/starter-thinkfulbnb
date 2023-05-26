@@ -66,6 +66,15 @@ header {
   color: #fff;
 }
 
+header nav{
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    justify-content: end;
+    padding: 0px;
+  }
+
+
 header nav ul {
   display: flex;
   justify-content: center;
@@ -79,10 +88,7 @@ header nav ul li a {
   color: #fff;
   text-decoration: none;
   padding: 0 20px 0 0;
-}
-
-header nav ul li:last-child a {
-  margin-right: 25px;
+  
 }
 
 header nav ul li a:hover {
@@ -133,9 +139,54 @@ footer p {
 }
 
 /* -------  Media Query ------- */
+@media all and (max-width:480px){
+  #ideas .invis-mobile {
+    display: grid;
+  }
+
+  .logo {
+    font-size: 30px;
+  }
+
+  #ideas header {
+    padding-left: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  header nav {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  header nav ul {
+    justify-content: center;
+  }
+  
+  header nav ul li {
+    margin-bottom: 10px;
+  }
+}
+
+
 @media all and (max-width: 599px) {
   #ideas .invis-mobile {
     display: none;
+  }
+  
+  header nav {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  header nav ul {
+    justify-content: center;
+  }
+  
+  header nav ul li {
+    margin-bottom: 10px;
   }
 }
 
@@ -162,7 +213,7 @@ footer p {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    flex-flow: row nowrap;
+    text-align: justify;
     align-items: center;
   }
 

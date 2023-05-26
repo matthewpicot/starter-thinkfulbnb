@@ -2,6 +2,8 @@
 
 body {
   font-family: "Lato", sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 h2 {
@@ -54,7 +56,7 @@ main img {
 
 header {
   background-color: #ff385c;
-  padding: 20px 20px 20px 20px;
+  padding: 15px 5px 10px 20px;
   text-align: center;
 }
 
@@ -80,7 +82,7 @@ header nav ul li a {
 }
 
 header nav ul li:last-child a {
-  margin-right: 20px;
+  margin-right: 25px;
 }
 
 header nav ul li a:hover {
@@ -104,7 +106,7 @@ form label {
 form select,
 form input {
   margin-bottom: 20px;
-  width: 65%;
+  width: 70%;
   float: right;
 }
 
@@ -131,21 +133,29 @@ footer p {
 }
 
 /* -------  Media Query ------- */
+@media all and (max-width: 599px) {
+  #ideas .invis-mobile {
+    display: none;
+  }
+}
 
 @media all and (min-width: 600px) {
   header {
-    background-color: #ff385c;
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
+    align-items: center;
   }
 
   header nav {
-    padding: 10px;
+    flex-direction: row;
+    margin: 5px;
   }
 
   form {
+    display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
+    justify-content: space-between;
   }
 
   .group {
@@ -181,5 +191,35 @@ footer p {
     display: flex;
     flex: 1;
     flex-direction: row;
+  }
+
+  #ideas .ideas-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 100%;
+    margin: 40px auto;
+  }
+
+  #ideas img {
+    padding: 20px;
+    width: 450px;
+  }
+
+  #ideas .forests {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #ideas .beaches {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #ideas .rustic-cabins {
+    display: none;
+  }
+
+  #ideas .pet-friendly {
+    display: none;
   }
 }
